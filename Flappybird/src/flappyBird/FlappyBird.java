@@ -63,6 +63,8 @@ public class FlappyBird implements ActionListener, MouseListener, KeyListener
 		addColumn(true);
 
 		timer.start();
+		
+		System.out.println("git works");
 
 	}
 
