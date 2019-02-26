@@ -1,0 +1,11 @@
+package flappyBird;
+
+public class FlappyBird {
+	
+	public static boolean main(String[] args)
+	{
+		return true;
+	}
+
+	
+}

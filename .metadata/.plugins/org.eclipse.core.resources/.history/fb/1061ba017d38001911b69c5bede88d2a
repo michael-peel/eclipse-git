@@ -1,0 +1,67 @@
+package flappyBird;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.Rectangle;
+
+import javax.swing.JFrame;
+import javax.swing.Timer;
+
+
+public class FlappyBird implements ActionListener
+{
+	
+	public static FlappyBird flappybird;
+	
+	public final int WIDTH = 800;
+	public final int HEIGHT = 800;
+	
+	public Renderer renderer;
+	
+	public Rectangle bird;
+	
+	public FlappyBird()
+	{
+		JFrame jframe = new JFrame();
+		
+		renderer = new Renderer();
+		Timer timer = new Timer(20, this);
+		
+		jframe.add(renderer);
+		jframe.setDefaultCloseOperation(jframe.EXIT_ON_CLOSE);
+		jframe.setSize(WIDTH, HEIGHT);
+		jframe.setVisible(true);
+		jframe.setResizable(false);
+		
+		bird = new Rectangle(WIDTH / 2 - 10, HEIGHT / 2 - 10, 20, 20);
+		
+		timer.restart();
+		
+	}
+	
+	
+	public void actionPerformed(ActionEvent e)
+	{
+		renderer.repaint();
+	}
+	
+	public void repaint(Graphics g)
+	{
+		g.setColor(Color.CYAN);
+		g.fillRect(0, 0, WIDTH, HEIGHT);
+		
+		g.setColor(Color.RED);
+		g.fillRect(bird.x, bird.y, bird.width, bird.height);
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		flappybird = new FlappyBird();
+		
+	}
+	
+	
+}

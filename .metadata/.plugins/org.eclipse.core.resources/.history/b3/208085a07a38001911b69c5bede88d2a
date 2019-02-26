@@ -1,0 +1,47 @@
+package flappyBird;
+
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+import javax.swing.Timer;
+
+
+public class FlappyBird implements ActionListener
+{
+	
+	public static FlappyBird flappybird implements ;
+	
+	public final int WIDTH = 800;
+	public final int HEIGHT = 800;
+	
+	public Renderer renderer;
+	
+	public FlappyBird()
+	{
+		JFrame jframe = new JFrame();
+		
+		renderer = new Renderer();
+		Timer timer = new Timer(20, this);
+		
+		jframe.add(renderer);
+		jframe.setDefaultCloseOperation(jframe.EXIT_ON_CLOSE);
+		jframe.setSize(WIDTH, HEIGHT);
+		jframe.setVisible(true);
+		jframe.setResizable(false);
+	}
+	
+	public void repaint(Graphics g)
+	{
+		
+	}
+
+	
+	
+	public static void main(String[] args)
+	{
+		flappybird = new FlappyBird();
+		
+	}
+	
+	
+}

@@ -1,0 +1,26 @@
+package flappyBird;
+
+import javax.swing.JFrame;
+
+public class FlappyBird {
+	
+	public static FlappyBird flappybird;
+	
+	public final int WIDTH = 800;
+	public final int HEIGHT = 800;
+	
+	public FlappyBird()
+	{
+		JFrame jframe = new JFrame();
+		
+		jframe.setDefaultCloseOperation(jframe.EXIT_ON_CLOSE);
+		jframe.setSize(WIDTH, HEIGHT);
+		jframe.setVisible(true);
+	}
+	public static void main(String[] args)
+	{
+		flappybird = new FlappyBird();
+	}
+
+	
+}
